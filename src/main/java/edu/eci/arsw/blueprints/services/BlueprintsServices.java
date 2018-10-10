@@ -14,6 +14,7 @@ import java.util.Map;
 import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import edu.eci.arsw.blueprints.persistence.BlueprintPersistenceException;
 
 /**
  *
@@ -25,7 +26,8 @@ public class BlueprintsServices {
     @Autowired
     BlueprintsPersistence bpp=null;
     
-    public void addNewBlueprint(Blueprint bp){
+    public void addNewBlueprint(Blueprint bp)throws BlueprintPersistenceException{
+        bpp.saveBlueprint(bp);
         
     }
     
