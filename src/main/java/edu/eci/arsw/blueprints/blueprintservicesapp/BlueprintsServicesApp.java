@@ -5,10 +5,27 @@
  */
 package edu.eci.arsw.blueprints.blueprintservicesapp;
 
+import edu.eci.arsw.blueprints.services.BlueprintsServices;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author USER
  */
+@Service
 public class BlueprintsServicesApp {
-    
+
+    private BlueprintsServices blueprintsServices;
+
+    @Autowired
+    public void setBlueprintsServices(BlueprintsServices blueprintsServices) {
+        this.blueprintsServices = blueprintsServices;
+    }
+
+    public BlueprintsServices getBlueprintsServices() {
+        return blueprintsServices;
+    }
+
+
 }
