@@ -5,10 +5,18 @@
  */
 package edu.eci.arsw.blueprints.filters;
 
+import edu.eci.arsw.blueprints.model.Blueprint;
+
 /**
  *
  * @author USER
  */
-public class BlueprintFilter {
+public interface BlueprintFilter {
     
+     /**
+     * 
+     * @param blueprint
+     * @return 
+     */
+    public Blueprint filter(Blueprint blueprint);
 }
